@@ -328,7 +328,7 @@ figcaption {
 .timeline-year {
     font-weight: 700;
     color: var(--text);
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
 }
 
 .timeline-content {
