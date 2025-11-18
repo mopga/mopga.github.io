@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mopga's home</title>
+    <title>mopga — Обо мне</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="page-about">
     <header class="site-header">
         <div class="container header-inner">
-                <div class="logo">mopga</div>
+            <div class="logo">mopga</div>
             <nav class="site-nav">
                 <ul>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#career">Карьера</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a class="nav-link nav-about" href="index.html">Обо мне</a></li>
+                    <li><a class="nav-link nav-projects" href="projects.html">Pet-проекты</a></li>
+                    <li><a class="nav-link nav-contacts" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,10 +28,10 @@
                 </div>
                 <div class="hero-content">
                     <p class="hero-label">Привет, я</p>
-                    <h1>Яков(mopga)</h1>
+                    <h1>Яков (mopga)</h1>
                     <p class="hero-subtitle">ИТ лидер кластера MLOps / системный архитектор</p>
                     <p class="hero-description">Строю устойчивые ML-платформы и пет-проекты, которые можно запускать без шаманства. Люблю архитектуру, понятные процессы и игры, в которых система важнее случайности.</p>
-                    <a class="btn primary" href="#projects">Смотреть проекты</a>
+                    <a class="btn primary" href="projects.html">Смотреть проекты</a>
                 </div>
             </div>
         </section>
@@ -40,8 +39,8 @@
         <section class="section" id="about">
             <div class="container">
                 <h2>Обо мне</h2>
-                <p>Сейчас руковожу кластером MLOps: несколько продуктовых команд, интеграции с LLM-агентами, эксплуатация пайплайнов и платформ, которые переживают и смену поколений, и резкие повороты стратегии.</p>
-                <p>Люблю связывать людей и системы, чтобы получалась единая операционная модель. До этого выступал архитектором и продуктовым владельцем DataOps/MLOps решений: проектировал самообслуживание, каталоги, инструменты запуска и наблюдаемости. Пет-проекты — мой испытательный полигон, где проверяю гипотезы и эстетические идеи.</p>
+                <p>Сейчас руковожу кластером MLOps: несколько продуктовых команд, интеграции с LLM-агентами, эксплуатация пайплайнов и платформ, которые переживают смену поколений и резкие повороты стратегии.</p>
+                <p>Люблю связывать людей и системы, чтобы получалась единая операционная модель. Ранее выступал архитектором и продуктовым владельцем DataOps/MLOps решений: проектировал самообслуживание, каталоги, инструменты запуска и наблюдаемости. Пет-проекты — мой испытательный полигон, где проверяю гипотезы и эстетические идеи.</p>
                 <h3 class="section-subtitle">Фокусы</h3>
                 <ul class="about-list">
                     <li>Работа с MLOps / DataOps платформами</li>
@@ -57,37 +56,27 @@
                 <h2>Карьера</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-year">2025 – сейчас</div>
+                        <div class="timeline-year">2024 — сейчас</div>
                         <div class="timeline-content">
-                            <h3>ИТ лидер кластера MLOps, AlfaBank</h3>
-                            <p>Несколько продуктовых команд (6 команд, 50+ человек зона влияния) и экосистема платформенных сервисов.</p>
-                            <p>MLOps / LLMOps-платформа, интеграции со смежными доменами.</p>
-                            <p>Ответственность: стратегия, архитектура, процессы, переходы между платформами.</p>
+                            <h3>ИТ лидер кластера MLOps, КОМПАНИЯ (плейсхолдер)</h3>
+                            <p>Руководство несколькими продуктовыми командами и экосистемой платформенных сервисов.</p>
+                            <p>Фокус на устойчивости пайплайнов, интеграции LLM-агентов и переходах между поколениями платформ.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-year">2024</div>
+                        <div class="timeline-year">2021 — 2024</div>
                         <div class="timeline-content">
-                            <h3>CPO MLOps платформы, МТС</h3>
-                            <p>Запуск и развитие платформы данных и ML с фокусом на самообслуживание, наблюдаемость и стабильность пайплайнов.</p>
-                            <p>Команда: кроссфункциональная, 11 человек.</p>
+                            <h3>CPO / архитектор DataOps + MLOps платформы, КОМПАНИЯ (плейсхолдер)</h3>
+                            <p>Запуск и развитие платформы данных и ML с упором на самообслуживание, наблюдаемость и стабильность пайплайнов.</p>
+                            <p>Работа с кроссфункциональными командами, интеграциями и пользовательскими сценариями.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-year">2021–2024</div>
+                        <div class="timeline-year">До 2021</div>
                         <div class="timeline-content">
-                            <h3>PO/TeamLead Model training платформы, Сбер</h3>
-                            <p>Запуск и развитие платформы обучения и разработки ML моделей, включая суперкомпьютер для train LLM's.</p>
-                            <p>Команда: 7 человек разработка + DevOps.</p>
-                            <p>Фокус: DS/Dev-friendly платформа, стабильность и масштабируемость.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">Ранние роли</div>
-                        <div class="timeline-content">
-                            <h3>DevOps / Архитектор</h3>
-                            <p>Дата-продукты и платформы с hands-on опытом в разных стеках.</p>
-                            <p>Строил интеграции, автоматизацию и эксплуатацию в разных командах.</p>
+                            <h3>Роли разработчика/архитектора (плейсхолдер)</h3>
+                            <p>Практический опыт в DevOps и архитектуре, построение интеграций, автоматизации и эксплуатационных процессов.</p>
+                            <p>Работа с разными командами и стеками, поиск баланса между скоростью и надёжностью.</p>
                         </div>
                     </div>
                 </div>
@@ -103,7 +92,7 @@
                         <ul>
                             <li>Kubernetes, контейнеризация, оркестрация</li>
                             <li>CI/CD, автоматизация поставки</li>
-                            <li>Сетевые сервисы, безопасность, observability</li>
+                            <li>Надёжность сервисов, observability</li>
                             <li>Управление ресурсами и кластерные переходы</li>
                         </ul>
                     </div>
@@ -111,8 +100,8 @@
                         <h3>Данные и ML</h3>
                         <ul>
                             <li>MLOps-платформы, пайплайны, фиче сторы</li>
-                            <li>Каталоги данных, оркестрация задач</li>
-                            <li>DataOps и процессинг, стриминг и batch</li>
+                            <li>Каталоги данных и оркестрация задач</li>
+                            <li>DataOps и процессинг: batch и стриминг</li>
                             <li>Мониторинг качества данных и моделей</li>
                         </ul>
                     </div>
@@ -120,9 +109,9 @@
                         <h3>LLM и агенты</h3>
                         <ul>
                             <li>Интеграция LLM и агентов в бизнес-процессы</li>
-                            <li>Инструменты для сборки и отладки цепочек</li>
-                            <li>Встраивание ассистентов в платформенные продукты</li>
-                            <li>Этика, контроль и безопасность ответов</li>
+                            <li>Сборка, отладка и контроль цепочек</li>
+                            <li>Встраивание ассистентов в продукты и платформы</li>
+                            <li>Этика, безопасность и контроль ответов</li>
                         </ul>
                     </div>
                     <div class="stack-card">
@@ -137,99 +126,16 @@
                 </div>
             </div>
         </section>
-
-        <section class="section" id="projects">
-            <div class="container">
-                <h2>Проекты</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-card-body">
-                            <h3>taiko-web-fork</h3>
-                            <p class="project-subtitle">Форк таико-симулятора, превратившийся в полноценное настольное приложение.</p>
-                            <p>Фокус на desktop-лаунчере, оптимизации бэкенда, поддержке режимов Tower / DanDojo и сканере тысяч TJA-файлов. Исправляю наследие старых билдов и упаковываю контент в понятные коллекции.</p>
-                            <p class="tech">Python, Node.js/Electron, MongoDB</p>
-                        </div>
-                        <div class="project-links">
-                            <a class="btn secondary" href="https://github.com/mopga/taiko-web-fork" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-card-body">
-                            <h3>DreamShards (Осколки Снов)</h3>
-                            <p class="project-subtitle">Экспериментальная 2D RPG о снах, масках и тенях.</p>
-                            <p>Повествование обрывками, пошаговые бои, медиевальный визуальный стиль и кастомные ассеты. Цель — собрать атмосферную историю, где механики и арт равноправны.</p>
-                            <p class="tech">Game engine / 2D / custom art</p>
-                        </div>
-                        <div class="project-links">
-                            <a class="btn secondary" href="https://github.com/mopga/DreamShards" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-card-body">
-                            <h3>Проект N</h3>
-                            <p class="project-subtitle">Конструктор будущей инициативы.</p>
-                            <p>Рабочее название и черновая концепция. Здесь появится описание эксперимента, когда идея пройдёт стадию прототипа и получит собственный репозиторий.</p>
-                            <p class="tech">Технологии уточняются</p>
-                        </div>
-                        <div class="project-links">
-                            <a class="btn secondary" href="#">GitHub</a>
-                            <a class="btn ghost" href="#">Live</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="contact">
-            <div class="container">
-                <h2>Контакты</h2>
-                <p>Открыт к диалогу о архитектуре, MLOps, играх и пет-проектах. Проще всего связаться так:</p>
-                <ul class="contact-list">
-                    <li>
-                        <span class="contact-icon">GH</span>
-                        <div>
-                            <span class="contact-label">GitHub</span>
-                            <a href="https://github.com/mopga" target="_blank" rel="noopener">github.com/mopga</a>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="contact-icon">TG</span>
-                        <div>
-                            <span class="contact-label">Telegram</span>
-                            <a href="https://t.me/mopga" target="_blank" rel="noopener">@mopga</a>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="contact-icon">@</span>
-                        <div>
-                            <span class="contact-label">Email</span>
-                            <a href="mailto:mopgaroot@gmail.com">mopgaroot@gmail.com</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>© <span id="year"></span> @mopga. Все права защищены условно.</p>
+            <p>© <span id="year"></span> Яков (mopga). Все права защищены условно.</p>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-                anchor.addEventListener('click', function (e) {
-                    var target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
             document.getElementById('year').textContent = new Date().getFullYear();
         });
     </script>

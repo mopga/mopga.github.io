@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mopga — Pet-проекты</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-projects">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">mopga</div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a class="nav-link nav-about" href="index.html">Обо мне</a></li>
+                    <li><a class="nav-link nav-projects" href="projects.html">Pet-проекты</a></li>
+                    <li><a class="nav-link nav-contacts" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section-top">
+            <div class="container">
+                <h1>Pet-проекты</h1>
+                <p class="page-intro">Собираю идеи в небольшие продукты и эксперименты: от десктоп-лаунчеров и игровых прототипов до рабочих инструментов. Ниже — текущие инициативы и то, над чем продолжаю работать.</p>
+
+                <article class="project-card detailed">
+                    <div class="project-card-body">
+                        <h2>taiko-web-fork</h2>
+                        <p class="project-subtitle">Форк таико-симулятора, превратившийся в полноценное настольное приложение.</p>
+                        <p>Фокус на desktop-лаунчере, оптимизации бэкенда, поддержке режимов Tower / DanDojo и сканере тысяч TJA-файлов. Исправляю наследие старых билдов и упаковываю контент в понятные коллекции.</p>
+                        <p class="tech">Python, Node.js/Electron, MongoDB</p>
+                        <div class="project-links">
+                            <a class="btn secondary" href="https://github.com/mopga/taiko-web-fork" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                        <div class="gallery-slider" data-slider="taiko">
+                            <div class="slider-window">
+                                <div class="slide active"><img src="assets/img/taiko-1.jpg" alt="taiko-web-fork скрин 1"></div>
+                                <div class="slide"><img src="assets/img/taiko-2.jpg" alt="taiko-web-fork скрин 2"></div>
+                            </div>
+                            <button class="slider-btn prev" aria-label="Предыдущий">←</button>
+                            <button class="slider-btn next" aria-label="Следующий">→</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card detailed">
+                    <div class="project-card-body">
+                        <h2>DreamShards (Осколки Снов)</h2>
+                        <p class="project-subtitle">Экспериментальная 2D RPG о снах, масках и тенях.</p>
+                        <p>Повествование обрывками, пошаговые бои, медиевальный визуальный стиль и кастомные ассеты. Цель — собрать атмосферную историю, где механики и арт равноправны.</p>
+                        <p class="tech">Game engine / 2D / custom art</p>
+                        <div class="project-links">
+                            <a class="btn secondary" href="https://github.com/mopga/DreamShards" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                        <div class="gallery-slider" data-slider="dreamshards">
+                            <div class="slider-window">
+                                <div class="slide active"><img src="assets/img/dreamshards-1.jpg" alt="DreamShards скрин 1"></div>
+                                <div class="slide"><img src="assets/img/dreamshards-2.jpg" alt="DreamShards скрин 2"></div>
+                            </div>
+                            <button class="slider-btn prev" aria-label="Предыдущий">←</button>
+                            <button class="slider-btn next" aria-label="Следующий">→</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card detailed">
+                    <div class="project-card-body">
+                        <h2>Проект N</h2>
+                        <p class="project-subtitle">Конструктор будущей инициативы.</p>
+                        <p>Рабочее название и черновая концепция. Здесь появится описание эксперимента, когда идея пройдёт стадию прототипа и получит собственный репозиторий.</p>
+                        <p class="tech">Технологии уточняются</p>
+                        <div class="project-links">
+                            <a class="btn secondary" href="#">GitHub</a>
+                        </div>
+                        <div class="gallery-slider single" data-slider="project-n">
+                            <div class="slider-window">
+                                <div class="slide active"><img src="assets/img/project-n-1.jpg" alt="Проект N скрин"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Яков (mopga). Все права защищены условно.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            const sliders = document.querySelectorAll('.gallery-slider');
+
+            sliders.forEach((slider) => {
+                const slides = Array.from(slider.querySelectorAll('.slide'));
+                if (!slides.length) return;
+                let index = 0;
+
+                const updateSlides = () => {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('active', i === index);
+                    });
+                };
+
+                const prevBtn = slider.querySelector('.slider-btn.prev');
+                const nextBtn = slider.querySelector('.slider-btn.next');
+
+                prevBtn && prevBtn.addEventListener('click', () => {
+                    index = (index - 1 + slides.length) % slides.length;
+                    updateSlides();
+                });
+
+                nextBtn && nextBtn.addEventListener('click', () => {
+                    index = (index + 1) % slides.length;
+                    updateSlides();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

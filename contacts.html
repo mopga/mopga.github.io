@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mopga — Контакты</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-contacts">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">mopga</div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a class="nav-link nav-about" href="index.html">Обо мне</a></li>
+                    <li><a class="nav-link nav-projects" href="projects.html">Pet-проекты</a></li>
+                    <li><a class="nav-link nav-contacts" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section-top" id="contact">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p class="page-intro">Открыт к диалогу о архитектуре, MLOps, играх и пет-проектах. Проще всего связаться по каналам ниже.</p>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">in</span>
+                        <div>
+                            <span class="contact-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/yakov-budymko-45937a178/" target="_blank" rel="noopener">linkedin.com/in/yakov-budymko-45937a178</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">GH</span>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/mopga" target="_blank" rel="noopener">github.com/mopga</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">TG</span>
+                        <div>
+                            <span class="contact-label">Telegram @mopga</span>
+                            <a href="https://t.me/mopga" target="_blank" rel="noopener">t.me/mopga</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">@</span>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:mopgaroot@gmail.com">mopgaroot@gmail.com</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Яков (mopga). Все права защищены условно.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
