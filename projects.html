@@ -26,14 +26,36 @@
                 <h1>Pet-проекты</h1>
                 <p class="page-intro">Собираю идеи в небольшие продукты и эксперименты: от десктоп-лаунчеров и игровых прототипов до рабочих инструментов. Ниже — текущие инициативы и то, над чем продолжаю работать.</p>
 
-                <article class="project-card detailed">
+                <div class="filter-bar" aria-label="Фильтр проектов по тематикам">
+                    <button class="filter-btn active" type="button" data-filter="all">Все</button>
+                    <button class="filter-btn" type="button" data-filter="games">Games</button>
+                    <button class="filter-btn" type="button" data-filter="tools">Tools</button>
+                    <button class="filter-btn" type="button" data-filter="llm">LLM/MLOps</button>
+                </div>
+
+                <article class="project-card detailed" data-tags="games,tools">
                     <div class="project-card-body">
                         <h2>taiko-web-fork</h2>
                         <p class="project-subtitle">Форк таико-симулятора, превратившийся в полноценное настольное приложение.</p>
                         <p>Фокус на desktop-лаунчере, оптимизации бэкенда, поддержке режимов Tower / DanDojo и сканере тысяч TJA-файлов. Исправляю наследие старых билдов и упаковываю контент в понятные коллекции.</p>
                         <p class="tech">Python, Node.js/Electron, MongoDB</p>
+                        <div class="project-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Статус</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Роль</span>
+                                <span class="attr-value">Соло-разработчик и продакт</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Результаты</span>
+                                <span class="attr-value">Desktop-лаунчер, оптимизация загрузки + сканер 10k+ треков</span>
+                            </div>
+                        </div>
                         <div class="project-links">
                             <a class="btn secondary" href="https://github.com/mopga/taiko-web-fork" target="_blank" rel="noopener">GitHub</a>
+                            <a class="btn ghost" href="https://youtu.be/3xIukYwP7F0" target="_blank" rel="noopener">Демо-видео</a>
                         </div>
                         <div class="gallery-slider" data-slider="taiko">
                             <div class="slider-window">
@@ -46,14 +68,29 @@
                     </div>
                 </article>
 
-                <article class="project-card detailed">
+                <article class="project-card detailed" data-tags="games">
                     <div class="project-card-body">
                         <h2>DreamShards (Осколки Снов)</h2>
                         <p class="project-subtitle">Экспериментальная 2D RPG о снах, масках и тенях.</p>
                         <p>Повествование обрывками, пошаговые бои, медиевальный визуальный стиль и кастомные ассеты. Цель — собрать атмосферную историю, где механики и арт равноправны.</p>
                         <p class="tech">Game engine / 2D / custom art</p>
+                        <div class="project-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Статус</span>
+                                <span class="badge status-wip">WIP</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Роль</span>
+                                <span class="attr-value">Геймдизайн, код, арт</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Результаты</span>
+                                <span class="attr-value">Вертикальный срез сюжета и боёв, первые 2 главы</span>
+                            </div>
+                        </div>
                         <div class="project-links">
                             <a class="btn secondary" href="https://github.com/mopga/DreamShards" target="_blank" rel="noopener">GitHub</a>
+                            <a class="btn ghost" href="https://youtu.be/jzfvFjuUwyg" target="_blank" rel="noopener">Видео-прототип</a>
                         </div>
                         <div class="gallery-slider" data-slider="dreamshards">
                             <div class="slider-window">
@@ -66,14 +103,29 @@
                     </div>
                 </article>
 
-                <article class="project-card detailed">
+                <article class="project-card detailed" data-tags="llm,tools">
                     <div class="project-card-body">
                         <h2>Проект N</h2>
                         <p class="project-subtitle">Конструктор будущей инициативы.</p>
                         <p>Рабочее название и черновая концепция. Здесь появится описание эксперимента, когда идея пройдёт стадию прототипа и получит собственный репозиторий.</p>
                         <p class="tech">Технологии уточняются</p>
+                        <div class="project-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Статус</span>
+                                <span class="badge status-archived">Archived</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Роль</span>
+                                <span class="attr-value">Идея и постановка задачи</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Результаты</span>
+                                <span class="attr-value">Зафиксированный scope, подготовка к новому прототипу</span>
+                            </div>
+                        </div>
                         <div class="project-links">
                             <a class="btn secondary" href="#">GitHub</a>
+                            <a class="btn ghost" href="#">Демо (в разработке)</a>
                         </div>
                         <div class="gallery-slider single" data-slider="project-n">
                             <div class="slider-window">
@@ -120,6 +172,24 @@
                 nextBtn && nextBtn.addEventListener('click', () => {
                     index = (index + 1) % slides.length;
                     updateSlides();
+                });
+            });
+
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            const applyFilter = (filter) => {
+                projectCards.forEach((card) => {
+                    const tags = (card.dataset.tags || '').split(',').map(tag => tag.trim());
+                    const matches = filter === 'all' || tags.includes(filter);
+                    card.classList.toggle('hidden', !matches);
+                });
+            };
+
+            filterButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach((b) => b.classList.toggle('active', b === btn));
+                    applyFilter(btn.dataset.filter || 'all');
                 });
             });
         });
