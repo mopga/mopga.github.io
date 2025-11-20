@@ -55,6 +55,36 @@
                         </div>
                     </li>
                 </ul>
+
+                <section class="contact-section">
+                    <div class="contact-section__header">
+                        <h2>Написать напрямую</h2>
+                        <p class="section-subtitle">Отвечаю лично в течение пары дней. Расскажите, как могу помочь.</p>
+                    </div>
+                    <form class="contact-form" action="https://formspree.io/f/xayrgkja" method="POST">
+                        <label class="form-field">
+                            <span class="form-label">Имя</span>
+                            <input type="text" name="name" placeholder="Как к вам обращаться" required>
+                        </label>
+                        <label class="form-field">
+                            <span class="form-label">Email</span>
+                            <input type="email" name="email" placeholder="name@example.com" required>
+                        </label>
+                        <label class="form-field">
+                            <span class="form-label">Сообщение</span>
+                            <textarea name="message" rows="4" placeholder="Опишите задачу или идею" required></textarea>
+                        </label>
+                        <label class="form-consent">
+                            <input type="checkbox" name="consent" required>
+                            <span>Согласен(на) на обработку данных для ответа на запрос. Контакты не передаю третьим лицам.</span>
+                        </label>
+                        <div class="form-actions">
+                            <button type="submit" class="btn primary">Отправить сообщение</button>
+                            <a class="btn secondary" href="https://calendly.com/mopga/intro" target="_blank" rel="noopener">Записаться на звонок</a>
+                        </div>
+                        <p class="privacy-note">Нажимая «Отправить сообщение», вы соглашаетесь на передачу данных через Formspree и получение ответа на email.</p>
+                    </form>
+                </section>
             </div>
         </section>
     </main>

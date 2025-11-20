@@ -375,6 +375,83 @@ figcaption {
     font-weight: 600;
 }
 
+.contact-section {
+    margin-top: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--card-bg);
+    padding: 1.75rem;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.contact-section__header h2 {
+    margin: 0 0 0.4rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-field {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: var(--muted);
+}
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(124, 93, 255, 0.2);
+    background: rgba(124, 93, 255, 0.06);
+}
+
+.form-consent {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.form-consent input {
+    margin-top: 0.15rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.privacy-note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
 .timeline {
     position: relative;
     display: flex;
@@ -602,6 +679,14 @@ figcaption {
     .contact-list li {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .contact-section {
+        padding: 1.35rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
     }
 
     .timeline-item {
