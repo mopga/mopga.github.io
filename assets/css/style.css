@@ -198,6 +198,10 @@ img {
     gap: 1.5rem;
 }
 
+.project-card.hidden {
+    display: none;
+}
+
 .project-card.detailed {
     margin-bottom: 2rem;
 }
@@ -221,6 +225,91 @@ img {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
+}
+
+.project-attributes {
+    display: grid;
+    gap: 0.65rem;
+    margin: 1rem 0 0.25rem;
+}
+
+.project-attributes .attribute {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.attr-label {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.attr-value {
+    font-weight: 600;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+}
+
+.status-active {
+    color: #27ef8c;
+    border-color: rgba(39, 239, 140, 0.4);
+    background: rgba(39, 239, 140, 0.12);
+}
+
+.status-wip {
+    color: #ffc861;
+    border-color: rgba(255, 200, 97, 0.4);
+    background: rgba(255, 200, 97, 0.12);
+}
+
+.status-archived {
+    color: #9aa5b5;
+    border-color: rgba(154, 165, 181, 0.35);
+    background: rgba(154, 165, 181, 0.12);
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    padding: 0.55rem 0.95rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+    background: rgba(124, 93, 255, 0.2);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
 }
 
 .gallery-grid {
@@ -531,5 +620,16 @@ figcaption {
     .slider-btn {
         width: 38px;
         height: 38px;
+    }
+
+    .project-attributes .attribute {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+    }
+
+    .filter-btn {
+        width: auto;
+        flex: 1 0 45%;
+        text-align: center;
     }
 }
